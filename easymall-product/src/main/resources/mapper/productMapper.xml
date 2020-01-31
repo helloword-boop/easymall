@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easymall.mapper.ProductMapper">
+    <!--查询商品总数-->
+    <select id="queryProductCount" resultType="int">
+        select count(product_id) from t_product;
+    </select>
+    <!--按页和条数查询商品-->
+    <select id="queryProductByPage" resultType="Product">
+        select * from t_product limit #{start},#{rows};
+    </select>
+    <!--按ID查询商品-->
+    <select id="queryProductById" resultType="Product">
+        select * from t_product where product_id=#{productId};
+    </select>
+    <!--新增商品-->
+    <insert id="addProduct">
+        insert into t_product (product_id,product_name,product_price,
+        product_category,product_imgurl,product_num,product_description) values(
+        #{productId},#{productName},#{productPrice},#{productCategory},#{productImgurl},#{productNum},#{productDescription})
+    </insert>
+    <!--更新商品-->
+    <update id="updateProduct">
+        update t_product set
+        product_name=#{productName},
+        product_price=#{productPrice},
+        product_num=#{productNum},
+        product_category=#{productCategory},
+        product_description=#{productDescription},
+        product_imgurl=#{productImgurl}
+        where product_id=#{productId};
+    </update>
+</mapper>

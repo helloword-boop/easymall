@@ -1,0 +1,3 @@
+com\easymall\controller\PictureController.class
+com\easymall\PictureStarter.class
+com\easymall\service\PictureService.class

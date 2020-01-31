@@ -1,0 +1,6 @@
+com\easymall\service\ProductService.class
+com\easymall\ProductServiceStarter.class
+com\easymall\mapper\ProductMapper.class
+META-INF\spring-configuration-metadata.json
+com\easymall\controller\ProductController.class
+com\easymall\config\RedisClusterConfig.class

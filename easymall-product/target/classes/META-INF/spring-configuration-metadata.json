@@ -1,0 +1,35 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.easymall.config.RedisClusterConfig",
+      "name": "redis.cluster",
+      "type": "com.easymall.config.RedisClusterConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.easymall.config.RedisClusterConfig",
+      "defaultValue": 0,
+      "name": "redis.cluster.max-idle",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.easymall.config.RedisClusterConfig",
+      "defaultValue": 0,
+      "name": "redis.cluster.max-total",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.easymall.config.RedisClusterConfig",
+      "defaultValue": 0,
+      "name": "redis.cluster.min-idle",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.easymall.config.RedisClusterConfig",
+      "name": "redis.cluster.nodes",
+      "type": "java.util.List<java.lang.String>"
+    }
+  ]
+}
