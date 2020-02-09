@@ -13,6 +13,7 @@
     <module>easymall-cart</module>
       <module>easymall-order</module>
     <module>easymall-search</module>
+      <module>easymall-seckill</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -26,7 +27,6 @@
   <packaging>pom</packaging>
 
   <name>easymall-parent</name>
-  <!-- FIXME change it to the project's website -->
   <url>http://www.easymall.com</url>
 
   <properties>

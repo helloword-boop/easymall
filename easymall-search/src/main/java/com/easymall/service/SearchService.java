@@ -4,7 +4,6 @@ import com.easymall.common.pojo.Product;
 import com.easymall.common.utils.MapperUtil;
 import com.easymall.mapper.SearchMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import org.elasticsearch.action.admin.indices.exists.indices.IndicesExistsResponse;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.transport.TransportClient;
@@ -25,11 +24,11 @@ public class SearchService {
     @Autowired
     private TransportClient transportClient;
     public void createIndex(String indexName) throws JsonProcessingException {
-        IndicesExistsResponse response = transportClient.admin().indices().prepareExists(indexName).get();
+        /*IndicesExistsResponse response = transportClient.admin().indices().prepareExists(indexName).get();
         if (response.isExists()) {
             return;
         }
-        transportClient.admin().indices().prepareCreate(indexName).get();
+        transportClient.admin().indices().prepareCreate(indexName).get();*/
         List<Product> products = searchMapper.queryAllProduct();
         for (Product product : products) {
             String productJson = MapperUtil.MP.writeValueAsString(product);

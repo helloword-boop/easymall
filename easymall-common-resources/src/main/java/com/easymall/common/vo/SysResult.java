@@ -15,7 +15,6 @@ public class SysResult {
 		this.data=data;
 	}
 	public SysResult() {
-		// TODO Auto-generated constructor stub
 	}
 	//有可能返回的只有status,msg,没有data
 	//编写静态方法,获取具有参数数据的SysResult,失败做准备
