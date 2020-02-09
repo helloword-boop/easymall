@@ -6,6 +6,16 @@ public class Success {
 	private Long successId;
 	private Long seckillId;
 	private String userId;
+	private Long userPhone;
+
+	public Long getUserPhone() {
+		return userPhone;
+	}
+
+	public void setUserPhone(Long userPhone) {
+		this.userPhone = userPhone;
+	}
+
 	private Integer state;
 	private Date createTime;
 	public Long getSuccessId() {

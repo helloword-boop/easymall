@@ -1,6 +1,0 @@
-com\easymall\controller\UserController.class
-com\easymall\mapper\UserMapper.class
-com\easymall\service\UserService.class
-com\easymall\UserServiceStarter.class
-META-INF\spring-configuration-metadata.json
-com\easymall\config\RedisClusterConfig.class
