@@ -41,7 +41,6 @@ public class SeckillController {
         String usrPhone = "1394561" + RandomUtils.nextInt(9999);
         String msg=usrPhone+"/"+seckillId;
         rabbitTemplate.convertAndSend("seckillEx","seckill",msg);
-        System.out.println(msg);
         return SysResult.ok();
     }
 }

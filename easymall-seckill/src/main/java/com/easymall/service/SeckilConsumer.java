@@ -18,17 +18,16 @@ public class SeckilConsumer {
 
     @RabbitListener(queues = "seckillQueue")
     public void consume(String msg) {
-        System.out.println(msg);
         long userPhone = Long.parseLong(msg.split("/")[0]);
         long seckillId = Long.parseLong(msg.split("/")[1]);
-        /*String seckillNum = jedisCluster.rpop("seckilllist");
+        String seckillNum = jedisCluster.rpop("list");
         if (seckillNum == null) {
-            System.out.println("用户:"+userPhone+" 秒杀:"+seckillId+" 失败");
+            System.out.println("用户:"+userPhone+" 秒杀商品ID:"+seckillId+" 失败");
             return;
-        }*/
+        }
         int result = seckillMapper.reduceNum(seckillId);
         if (result == 0) {
-            System.out.println("用户:"+userPhone+" 秒杀:"+seckillId+" 失败");
+            System.out.println("用户:"+userPhone+" 秒杀商品ID:"+seckillId+" 失败");
             return;
         }else {
             Success success = new Success();
@@ -36,6 +35,7 @@ public class SeckilConsumer {
             success.setSeckillId(seckillId);
             success.setState(0);
             success.setCreateTime(new Date());
+            System.out.println("用户:"+userPhone+" 秒杀商品ID:"+seckillId+" 成功");
             seckillMapper.saveSuccess(success);
         }
 
