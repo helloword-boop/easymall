@@ -38,7 +38,8 @@ public class SearchService {
 
     public List<Product> search(String text, int page, int rows) {
         MatchQueryBuilder query = QueryBuilders.matchQuery("productName", text);
-        int start=(page-1)*rows;
+//        TermQueryBuilder query = QueryBuilders.termQuery("productName", text);
+       int start=(page-1)*rows;
         SearchRequestBuilder request = transportClient.prepareSearch("easymall");
         request.setQuery(query).setFrom(start).setSize(rows);
         SearchResponse response=request.get();

@@ -22,7 +22,7 @@ public class PictureService {
         }
         String newName=uuid+ext;
         String path0=UploadUtil.getUploadPath(newName,"upload");
-        String path= "D:/easymall/img/"+path0+"/";
+        String path= "D:/Devloper/easymall/img/"+path0+"/";
         File dir=new File(path);
         if (!dir.exists()){
             dir.mkdirs();
