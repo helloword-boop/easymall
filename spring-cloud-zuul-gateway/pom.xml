@@ -12,6 +12,7 @@
     <artifactId>spring-cloud-zuul-gateway</artifactId>
 
     <name>spring-cloud-zuul-gateway</name>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
